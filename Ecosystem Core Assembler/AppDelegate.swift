@@ -13,10 +13,12 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    
+    var assemblyManager: AssemblyManager!
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        assemblyManager = AssemblyManager(appDelegate: self)
         return true
     }
 
@@ -88,6 +90,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
-
+    
+    func wipeContext() {
+        print("Wiping context.")
+        let context = persistentContainer.viewContext
+        let entityDescriptions = persistentContainer.managedObjectModel.entities
+        for entityDescription in entityDescriptions {
+            let globalFetchRequest = NSFetchRequest<NSFetchRequestResult>()
+            globalFetchRequest.entity = entityDescription
+            let globalWipeRequest = NSBatchDeleteRequest(fetchRequest: globalFetchRequest)
+            do {
+                try context.execute(globalWipeRequest)
+            } catch {
+                fatalError("Failed to execute request \(globalWipeRequest)")
+            }
+        }
+        print("Context wiped.\n")
+    }
+    
+    
 }
 

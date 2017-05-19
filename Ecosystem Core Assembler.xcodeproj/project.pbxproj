@@ -7,23 +7,41 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0413CB9B1ECF353100632E12 /* files.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0413CB9A1ECF353100632E12 /* files.plist */; };
+		047E7D911ECE4F6300672054 /* SpeciesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047E7D901ECE4F6300672054 /* SpeciesTableViewController.swift */; };
+		047E7D941ECE51BC00672054 /* SpeciesDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047E7D931ECE51BC00672054 /* SpeciesDetailViewController.swift */; };
+		047F40C51ECD357D0032FFA3 /* EcosystemTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047F40C41ECD357D0032FFA3 /* EcosystemTableViewController.swift */; };
+		047F40C71ECD3B310032FFA3 /* EcosystemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047F40C61ECD3B310032FFA3 /* EcosystemDetailViewController.swift */; };
 		04AAB1D31EC631BF009C1D14 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AAB1D21EC631BF009C1D14 /* AppDelegate.swift */; };
-		04AAB1D51EC631BF009C1D14 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AAB1D41EC631BF009C1D14 /* ViewController.swift */; };
+		04AAB1D51EC631BF009C1D14 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AAB1D41EC631BF009C1D14 /* MainViewController.swift */; };
 		04AAB1D81EC631BF009C1D14 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04AAB1D61EC631BF009C1D14 /* Main.storyboard */; };
 		04AAB1DB1EC631BF009C1D14 /* Ecosystem_Core_Assembler.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 04AAB1D91EC631BF009C1D14 /* Ecosystem_Core_Assembler.xcdatamodeld */; };
 		04AAB1DD1EC631BF009C1D14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04AAB1DC1EC631BF009C1D14 /* Assets.xcassets */; };
 		04AAB1E01EC631BF009C1D14 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04AAB1DE1EC631BF009C1D14 /* LaunchScreen.storyboard */; };
+		04AAB1EA1EC631E0009C1D14 /* Factor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AAB1E71EC631E0009C1D14 /* Factor.swift */; };
+		04AAB1EB1EC631E0009C1D14 /* Ecosystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AAB1E81EC631E0009C1D14 /* Ecosystem.swift */; };
+		04AAB1EC1EC631E0009C1D14 /* FactorData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04AAB1E91EC631E0009C1D14 /* FactorData.plist */; };
+		04F02F5B1ECBE15700AEE8F0 /* AssemblyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F02F5A1ECBE15700AEE8F0 /* AssemblyManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0413CB9A1ECF353100632E12 /* files.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = files.plist; sourceTree = "<group>"; };
+		047E7D901ECE4F6300672054 /* SpeciesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeciesTableViewController.swift; sourceTree = "<group>"; };
+		047E7D931ECE51BC00672054 /* SpeciesDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeciesDetailViewController.swift; sourceTree = "<group>"; };
+		047F40C41ECD357D0032FFA3 /* EcosystemTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EcosystemTableViewController.swift; sourceTree = "<group>"; };
+		047F40C61ECD3B310032FFA3 /* EcosystemDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EcosystemDetailViewController.swift; sourceTree = "<group>"; };
 		04AAB1CF1EC631BF009C1D14 /* Ecosystem Core Assembler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ecosystem Core Assembler.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04AAB1D21EC631BF009C1D14 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		04AAB1D41EC631BF009C1D14 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		04AAB1D41EC631BF009C1D14 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		04AAB1D71EC631BF009C1D14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		04AAB1DA1EC631BF009C1D14 /* Ecosystem_Core_Assembler.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Ecosystem_Core_Assembler.xcdatamodel; sourceTree = "<group>"; };
 		04AAB1DC1EC631BF009C1D14 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04AAB1DF1EC631BF009C1D14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04AAB1E11EC631BF009C1D14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04AAB1E71EC631E0009C1D14 /* Factor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Factor.swift; sourceTree = "<group>"; };
+		04AAB1E81EC631E0009C1D14 /* Ecosystem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ecosystem.swift; sourceTree = "<group>"; };
+		04AAB1E91EC631E0009C1D14 /* FactorData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = FactorData.plist; sourceTree = "<group>"; };
+		04F02F5A1ECBE15700AEE8F0 /* AssemblyManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssemblyManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +55,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		047E7D8F1ECE4F4700672054 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				04AAB1E71EC631E0009C1D14 /* Factor.swift */,
+				04AAB1E81EC631E0009C1D14 /* Ecosystem.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		047E7D921ECE503900672054 /* SpeciesManagerViews */ = {
+			isa = PBXGroup;
+			children = (
+				047E7D901ECE4F6300672054 /* SpeciesTableViewController.swift */,
+				047E7D931ECE51BC00672054 /* SpeciesDetailViewController.swift */,
+			);
+			name = SpeciesManagerViews;
+			sourceTree = "<group>";
+		};
+		049D60FF1ECD06F30064EFEE /* EcosystemManagerViews */ = {
+			isa = PBXGroup;
+			children = (
+				047F40C41ECD357D0032FFA3 /* EcosystemTableViewController.swift */,
+				047F40C61ECD3B310032FFA3 /* EcosystemDetailViewController.swift */,
+			);
+			name = EcosystemManagerViews;
+			sourceTree = "<group>";
+		};
 		04AAB1C61EC631BF009C1D14 = {
 			isa = PBXGroup;
 			children = (
@@ -57,12 +102,18 @@
 			isa = PBXGroup;
 			children = (
 				04AAB1D21EC631BF009C1D14 /* AppDelegate.swift */,
-				04AAB1D41EC631BF009C1D14 /* ViewController.swift */,
+				04AAB1D41EC631BF009C1D14 /* MainViewController.swift */,
+				04F02F5A1ECBE15700AEE8F0 /* AssemblyManager.swift */,
+				047E7D921ECE503900672054 /* SpeciesManagerViews */,
+				049D60FF1ECD06F30064EFEE /* EcosystemManagerViews */,
+				047E7D8F1ECE4F4700672054 /* Model */,
+				04AAB1E91EC631E0009C1D14 /* FactorData.plist */,
 				04AAB1D61EC631BF009C1D14 /* Main.storyboard */,
 				04AAB1DC1EC631BF009C1D14 /* Assets.xcassets */,
 				04AAB1DE1EC631BF009C1D14 /* LaunchScreen.storyboard */,
 				04AAB1E11EC631BF009C1D14 /* Info.plist */,
 				04AAB1D91EC631BF009C1D14 /* Ecosystem_Core_Assembler.xcdatamodeld */,
+				0413CB9A1ECF353100632E12 /* files.plist */,
 			);
 			path = "Ecosystem Core Assembler";
 			sourceTree = "<group>";
@@ -74,8 +125,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 04AAB1E41EC631BF009C1D14 /* Build configuration list for PBXNativeTarget "Ecosystem Core Assembler" */;
 			buildPhases = (
-				04AAB1CB1EC631BF009C1D14 /* Sources */,
+				0413CB9C1ECF361C00632E12 /* ShellScript */,
 				04AAB1CC1EC631BF009C1D14 /* Frameworks */,
+				04AAB1CB1EC631BF009C1D14 /* Sources */,
 				04AAB1CD1EC631BF009C1D14 /* Resources */,
 			);
 			buildRules = (
@@ -127,20 +179,45 @@
 			buildActionMask = 2147483647;
 			files = (
 				04AAB1E01EC631BF009C1D14 /* LaunchScreen.storyboard in Resources */,
+				0413CB9B1ECF353100632E12 /* files.plist in Resources */,
 				04AAB1DD1EC631BF009C1D14 /* Assets.xcassets in Resources */,
 				04AAB1D81EC631BF009C1D14 /* Main.storyboard in Resources */,
+				04AAB1EC1EC631E0009C1D14 /* FactorData.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0413CB9C1ECF361C00632E12 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "echo \"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<!DOCTYPE plist PUBLIC \"-//Apple//DTD PLIST 1.0//EN\" \"http://www.apple.com/DTDs/PropertyList-1.0.dtd\">\n<plist version=\"1.0\">\n<dict>\" >  \"${SRCROOT}/${PROJECT_NAME}/files.plist\";\n## Chnage Assets.xcassets if not using default one\nfind \"${SRCROOT}/${PROJECT_NAME}/Assets.xcassets\" -type f -not -iname \"*@*\" -name \"*.png\"  -exec basename {} \\; | while read line; do echo \\<key\\>$line\\</key\\>\\<string\\>$line\\</string\\>; done >> ${SRCROOT}/${PROJECT_NAME}/files.plist;\necho \"</dict></plist>\" >>  \"${SRCROOT}/${PROJECT_NAME}/files.plist\";";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		04AAB1CB1EC631BF009C1D14 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04AAB1D51EC631BF009C1D14 /* ViewController.swift in Sources */,
+				04AAB1D51EC631BF009C1D14 /* MainViewController.swift in Sources */,
 				04AAB1D31EC631BF009C1D14 /* AppDelegate.swift in Sources */,
+				04AAB1EB1EC631E0009C1D14 /* Ecosystem.swift in Sources */,
+				047E7D911ECE4F6300672054 /* SpeciesTableViewController.swift in Sources */,
+				047F40C51ECD357D0032FFA3 /* EcosystemTableViewController.swift in Sources */,
+				047F40C71ECD3B310032FFA3 /* EcosystemDetailViewController.swift in Sources */,
+				047E7D941ECE51BC00672054 /* SpeciesDetailViewController.swift in Sources */,
+				04F02F5B1ECBE15700AEE8F0 /* AssemblyManager.swift in Sources */,
+				04AAB1EA1EC631E0009C1D14 /* Factor.swift in Sources */,
 				04AAB1DB1EC631BF009C1D14 /* Ecosystem_Core_Assembler.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -305,6 +382,7 @@
 				04AAB1E61EC631BF009C1D14 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

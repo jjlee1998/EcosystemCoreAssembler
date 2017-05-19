@@ -1,4 +1,51 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16D32" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="DirectorateEntity" representedClassName="DirectorateEntity" syncable="YES" codeGenerationType="class">
+        <relationship name="ecosystemEntities" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="EcosystemEntity" inverseName="directorateEntity" inverseEntity="EcosystemEntity" syncable="YES"/>
+        <relationship name="factorEntities" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="FactorEntity" inverseName="directorateEntity" inverseEntity="FactorEntity" syncable="YES"/>
+        <relationship name="interactionEntities" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="InteractionEntity" inverseName="directorateEntity" inverseEntity="InteractionEntity" syncable="YES"/>
+        <relationship name="speciesEntities" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="SpeciesEntity" inverseName="directorateEntity" inverseEntity="SpeciesEntity" syncable="YES"/>
+    </entity>
+    <entity name="EcosystemEntity" representedClassName="EcosystemEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="eulerIntervals" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="extinctionThreshold" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="imagePath" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="directorateEntity" maxCount="1" deletionRule="Nullify" destinationEntity="DirectorateEntity" inverseName="ecosystemEntities" inverseEntity="DirectorateEntity" syncable="YES"/>
+        <relationship name="factorEntities" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="FactorEntity" inverseName="ecosystemEntity" inverseEntity="FactorEntity" syncable="YES"/>
+    </entity>
+    <entity name="FactorEntity" representedClassName="FactorEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="level" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="directorateEntity" maxCount="1" deletionRule="Nullify" destinationEntity="DirectorateEntity" inverseName="factorEntities" inverseEntity="DirectorateEntity" syncable="YES"/>
+        <relationship name="ecosystemEntity" maxCount="1" deletionRule="Nullify" destinationEntity="EcosystemEntity" inverseName="factorEntities" inverseEntity="EcosystemEntity" syncable="YES"/>
+        <relationship name="speciesEntity" maxCount="1" deletionRule="Nullify" destinationEntity="SpeciesEntity" inverseName="activeFactorEntities" inverseEntity="SpeciesEntity" syncable="YES"/>
+    </entity>
+    <entity name="InteractionEntity" representedClassName="InteractionEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="coefficient" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="conjugateInteractionEntity" maxCount="1" deletionRule="Cascade" destinationEntity="InteractionEntity" inverseName="conjugateInteractionEntity" inverseEntity="InteractionEntity" syncable="YES"/>
+        <relationship name="directorateEntity" maxCount="1" deletionRule="Nullify" destinationEntity="DirectorateEntity" inverseName="interactionEntities" inverseEntity="DirectorateEntity" syncable="YES"/>
+        <relationship name="species" maxCount="1" deletionRule="Nullify" ordered="YES" destinationEntity="SpeciesEntity" inverseName="interactionEntities" inverseEntity="SpeciesEntity" syncable="YES"/>
+        <userInfo>
+            <entry key="key" value="value"/>
+        </userInfo>
+    </entity>
+    <entity name="SpeciesEntity" representedClassName="SpeciesEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="imagePath" attributeType="String" syncable="YES"/>
+        <attribute name="isPackHunter" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="movement" attributeType="String" syncable="YES"/>
+        <attribute name="name" attributeType="String" syncable="YES"/>
+        <attribute name="renderLogBase" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="standardPopulationSize" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="type" attributeType="String" syncable="YES"/>
+        <relationship name="activeFactorEntities" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="FactorEntity" inverseName="speciesEntity" inverseEntity="FactorEntity" syncable="YES"/>
+        <relationship name="directorateEntity" maxCount="1" deletionRule="Nullify" destinationEntity="DirectorateEntity" inverseName="speciesEntities" inverseEntity="DirectorateEntity" syncable="YES"/>
+        <relationship name="interactionEntities" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="InteractionEntity" inverseName="species" inverseEntity="InteractionEntity" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="DirectorateEntity" positionX="-261" positionY="117" width="128" height="105"/>
+        <element name="EcosystemEntity" positionX="-252" positionY="306" width="128" height="135"/>
+        <element name="FactorEntity" positionX="-459" positionY="148" width="135" height="105"/>
+        <element name="InteractionEntity" positionX="-342" positionY="-45" width="128" height="105"/>
+        <element name="SpeciesEntity" positionX="-74" positionY="153" width="128" height="195"/>
+    </elements>
 </model>
