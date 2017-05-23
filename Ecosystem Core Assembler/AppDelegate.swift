@@ -96,6 +96,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let context = persistentContainer.viewContext
         let entityDescriptions = persistentContainer.managedObjectModel.entities
         for entityDescription in entityDescriptions {
+            print("Wiping \(entityDescription)")
             let globalFetchRequest = NSFetchRequest<NSFetchRequestResult>()
             globalFetchRequest.entity = entityDescription
             let globalWipeRequest = NSBatchDeleteRequest(fetchRequest: globalFetchRequest)

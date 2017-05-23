@@ -32,6 +32,14 @@ extension InteractionEntity {
         self.coefficient = coeff1
         self.conjugateInteractionEntity = conjugate
     }
+    
+    convenience init(context: NSManagedObjectContext, directorate: DirectorateEntity, species: SpeciesEntity, naturalChangeConstant: Double) {
+        self.init(context: context)
+        self.directorateEntity = directorate
+        self.species = species
+        self.coefficient = naturalChangeConstant
+        self.conjugateInteractionEntity = self
+    }
 }
 
 extension SpeciesEntity {
@@ -63,6 +71,14 @@ class AssemblyManager {
     var context: NSManagedObjectContext!
     var directorateEntity: DirectorateEntity!
     
+    var imageNames: [String]! {
+        if let path = Bundle.main.path(forResource: "files", ofType: "plist"), let data = NSDictionary(contentsOfFile: path) as? [String: String] {
+            return Array(data.keys).sorted(by: {$0 < $1})
+        } else {
+            return [String]()
+        }
+    }
+    
     var ecosystems: [EcosystemEntity] {
         if let ecosystemEntities = directorateEntity.ecosystemEntities as? Set<EcosystemEntity> {
             return Array(ecosystemEntities).sorted(by: {$0.name! < $1.name!})
@@ -77,6 +93,32 @@ class AssemblyManager {
         } else {
             return [SpeciesEntity]()
         }
+    }
+    
+    var interactions: [InteractionEntity] {
+        if let interactionEntities = directorateEntity.interactionEntities as? Set<InteractionEntity> {
+            return Array(interactionEntities)
+        } else {
+            return [InteractionEntity]()
+        }
+    }
+    
+    var levels: [LevelEntity] {
+        if let levelEntities = directorateEntity.levelEntities as? Set<LevelEntity> {
+            return Array(levelEntities)
+        } else {
+            return [LevelEntity]()
+        }
+    }
+    
+    var maxLevelNumber: Int64 {
+        var max: Int64 = 0
+        for level in levels {
+            if level.levelNumber > max {
+                max = level.levelNumber
+            }
+        }
+        return max
     }
     
     init(appDelegate: AppDelegate) {
@@ -104,30 +146,6 @@ class AssemblyManager {
         appDelegate.saveContext()
     }
     
-    /*
-    @discardableResult func readIn(entity: InteractionEntity) -> Bool {
-        guard let species1Name = entity.species?.name else {
-            print("Did not read in interaction because it does not have a target species.\n")
-            return false
-        }
-        guard let conjugate = entity.conjugateInteractionEntity else {
-            print("Did not read in interaction for \(species1Name) because it does not have a conjugate.\n")
-            return false
-        }
-        guard let species2Name = conjugate.species?.name else {
-            print("Did not read in interaction for \(species1Name) because its conjugate does not have a target species.\n")
-            return false
-        }
-        guard species[species1Name] != nil && species[species2Name] != nil else {
-            print("Did not read in interaction between \(species1Name) and \(species2Name) because one or both of these species does not exist.")
-            return false
-        }
-        
-        interactions[species1Name]![species2Name] = entity
-        interactions[species2Name]![species1Name] = conjugate
-        return true
-    }*/
-    
     @discardableResult func createBlankEcosystemEntity() -> EcosystemEntity {
         let newEcosystemEntity = EcosystemEntity(context: context, directorate: directorateEntity, name: "New Ecosystem", eulerIntervals: 100, extinctionThreshold: 1e-3, imagePath: "/imagePath/")
         newEcosystemEntity.name! += " \(newEcosystemEntity.hashValue)"
@@ -136,30 +154,54 @@ class AssemblyManager {
     }
     
     @discardableResult func createBlankSpeciesEntity() -> SpeciesEntity {
-        let newSpeciesEntity = SpeciesEntity(context: context, directorate: directorateEntity, name: "New Species", type: .Consumer, movement: .Static, standardPopulationSize: 4, renderLogBase: 2.0, isPackHunter: false, imagePath: "/imagePath/")
+        let newSpeciesEntity = SpeciesEntity(context: context, directorate: directorateEntity, name: "New Species", type: .Resource, movement: .Static, standardPopulationSize: 4, renderLogBase: 2.0, isPackHunter: false, imagePath: "")
         newSpeciesEntity.name! += " \(newSpeciesEntity.hashValue)"
         save()
         return newSpeciesEntity
     }
     
-    /*
+    @discardableResult func createBlankInteractionEntityPair(species1: SpeciesEntity, species2: SpeciesEntity, coeff1: Double, coeff2: Double) -> (InteractionEntity, InteractionEntity)? {
+        guard !interactions.contains(where: {($0.species! == species1 && $0.conjugateInteractionEntity?.species! == species2) || ($0.species! == species2 && $0.conjugateInteractionEntity?.species! == species1)}) else {
+            return nil
+        }
+        let newInteractionEntity = InteractionEntity(context: context, directorate: directorateEntity, species1: species1, species2: species2, coeff1: coeff1, coeff2: coeff2)
+        save()
+        return (newInteractionEntity, newInteractionEntity.conjugateInteractionEntity!)
+    }
     
-    @discardableResult func createNewFactor(ecosystem: EcosystemEntity, species: SpeciesEntity, level: Double) -> FactorEntity {
+    @discardableResult func createBlankSelfInteraction(species: SpeciesEntity, naturalChangeConstant: Double) -> InteractionEntity? {
+        guard !interactions.contains(where: {$0.species! == species && $0 == $0.conjugateInteractionEntity}) else {
+            return nil
+        }
+        let newInteractionEntity = InteractionEntity(context: context, directorate: directorateEntity, species: species, naturalChangeConstant: naturalChangeConstant)
+        save()
+        return newInteractionEntity
+    }
+    
+    @discardableResult func createFactor(ecosystem: EcosystemEntity, species: SpeciesEntity, level: Double) -> FactorEntity {
         let newFactorEntity = FactorEntity(context: context, directorate: directorateEntity, ecosystem: ecosystem, species: species, level: level)
-        appDelegate.saveContext()
+        save()
         return newFactorEntity
     }
     
-    @discardableResult func createNewInteraction(species1: SpeciesEntity, species2: SpeciesEntity, coeff1: Double, coeff2: Double) -> (InteractionEntity, InteractionEntity)? {
-        let newInteractionEntity = InteractionEntity(context: context, directorate: directorateEntity, species1: species1, species2: species2, coeff1: coeff1, coeff2: coeff2)
-        guard readIn(entity: newInteractionEntity) else {
-            return nil
-        }
-        appDelegate.saveContext()
-        return (newInteractionEntity, newInteractionEntity.conjugateInteractionEntity!)
-    }*/
+    @discardableResult func createBlankLevel() -> LevelEntity {
+        let newLevelEntity = LevelEntity(context: context)
+        newLevelEntity.directorateEntity = directorateEntity
+        newLevelEntity.levelNumber = maxLevelNumber + 1
+        newLevelEntity.title = "New Level \(newLevelEntity.hashValue)"
+        save()
+        return newLevelEntity
+    }
     
-    
+    func createWinCondition(factor: FactorEntity, level: LevelEntity, greaterThan: Bool, threshold: Double) -> WinConditionEntity {
+        let newConditionEntity = WinConditionEntity(context: context)
+        newConditionEntity.factorEntity = factor
+        newConditionEntity.levelEntity = level
+        newConditionEntity.greaterThan = greaterThan
+        newConditionEntity.threshold = threshold
+        save()
+        return newConditionEntity
+    }
     
     func printEntityDiagnostics() {
         print("Entity Diagnostics:\n")

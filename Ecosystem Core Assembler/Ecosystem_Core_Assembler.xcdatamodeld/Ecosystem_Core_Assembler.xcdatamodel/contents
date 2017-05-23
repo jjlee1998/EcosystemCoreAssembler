@@ -4,6 +4,7 @@
         <relationship name="ecosystemEntities" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="EcosystemEntity" inverseName="directorateEntity" inverseEntity="EcosystemEntity" syncable="YES"/>
         <relationship name="factorEntities" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="FactorEntity" inverseName="directorateEntity" inverseEntity="FactorEntity" syncable="YES"/>
         <relationship name="interactionEntities" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="InteractionEntity" inverseName="directorateEntity" inverseEntity="InteractionEntity" syncable="YES"/>
+        <relationship name="levelEntities" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="LevelEntity" inverseName="directorateEntity" inverseEntity="LevelEntity" syncable="YES"/>
         <relationship name="speciesEntities" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="SpeciesEntity" inverseName="directorateEntity" inverseEntity="SpeciesEntity" syncable="YES"/>
     </entity>
     <entity name="EcosystemEntity" representedClassName="EcosystemEntity" syncable="YES" codeGenerationType="class">
@@ -13,12 +14,14 @@
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="directorateEntity" maxCount="1" deletionRule="Nullify" destinationEntity="DirectorateEntity" inverseName="ecosystemEntities" inverseEntity="DirectorateEntity" syncable="YES"/>
         <relationship name="factorEntities" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="FactorEntity" inverseName="ecosystemEntity" inverseEntity="FactorEntity" syncable="YES"/>
+        <relationship name="levelEntities" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="LevelEntity" inverseName="ecosystemEntity" inverseEntity="LevelEntity" syncable="YES"/>
     </entity>
     <entity name="FactorEntity" representedClassName="FactorEntity" syncable="YES" codeGenerationType="class">
         <attribute name="level" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <relationship name="directorateEntity" maxCount="1" deletionRule="Nullify" destinationEntity="DirectorateEntity" inverseName="factorEntities" inverseEntity="DirectorateEntity" syncable="YES"/>
         <relationship name="ecosystemEntity" maxCount="1" deletionRule="Nullify" destinationEntity="EcosystemEntity" inverseName="factorEntities" inverseEntity="EcosystemEntity" syncable="YES"/>
         <relationship name="speciesEntity" maxCount="1" deletionRule="Nullify" destinationEntity="SpeciesEntity" inverseName="activeFactorEntities" inverseEntity="SpeciesEntity" syncable="YES"/>
+        <relationship name="winConditionEntity" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="WinConditionEntity" inverseName="factorEntity" inverseEntity="WinConditionEntity" syncable="YES"/>
     </entity>
     <entity name="InteractionEntity" representedClassName="InteractionEntity" syncable="YES" codeGenerationType="class">
         <attribute name="coefficient" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
@@ -28,6 +31,23 @@
         <userInfo>
             <entry key="key" value="value"/>
         </userInfo>
+    </entity>
+    <entity name="LevelEntity" representedClassName="LevelEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="air" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="earth" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="introText" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="levelNumber" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="outroText" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="rain" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="subtitle" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sunLocation" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="temperature" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="title" attributeType="String" syncable="YES"/>
+        <attribute name="water" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="winBiodiversity" optional="YES" attributeType="Integer 64" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="directorateEntity" maxCount="1" deletionRule="Nullify" destinationEntity="DirectorateEntity" inverseName="levelEntities" inverseEntity="DirectorateEntity" syncable="YES"/>
+        <relationship name="ecosystemEntity" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="EcosystemEntity" inverseName="levelEntities" inverseEntity="EcosystemEntity" syncable="YES"/>
+        <relationship name="winConditionEntities" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="WinConditionEntity" inverseName="levelEntity" inverseEntity="WinConditionEntity" syncable="YES"/>
     </entity>
     <entity name="SpeciesEntity" representedClassName="SpeciesEntity" syncable="YES" codeGenerationType="class">
         <attribute name="imagePath" attributeType="String" syncable="YES"/>
@@ -41,11 +61,19 @@
         <relationship name="directorateEntity" maxCount="1" deletionRule="Nullify" destinationEntity="DirectorateEntity" inverseName="speciesEntities" inverseEntity="DirectorateEntity" syncable="YES"/>
         <relationship name="interactionEntities" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="InteractionEntity" inverseName="species" inverseEntity="InteractionEntity" syncable="YES"/>
     </entity>
+    <entity name="WinConditionEntity" representedClassName="WinConditionEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="greaterThan" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="threshold" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="factorEntity" maxCount="1" deletionRule="Nullify" destinationEntity="FactorEntity" inverseName="winConditionEntity" inverseEntity="FactorEntity" syncable="YES"/>
+        <relationship name="levelEntity" maxCount="1" deletionRule="Nullify" destinationEntity="LevelEntity" inverseName="winConditionEntities" inverseEntity="LevelEntity" syncable="YES"/>
+    </entity>
     <elements>
-        <element name="DirectorateEntity" positionX="-261" positionY="117" width="128" height="105"/>
-        <element name="EcosystemEntity" positionX="-252" positionY="306" width="128" height="135"/>
-        <element name="FactorEntity" positionX="-459" positionY="148" width="135" height="105"/>
+        <element name="DirectorateEntity" positionX="-261" positionY="117" width="128" height="120"/>
+        <element name="EcosystemEntity" positionX="-252" positionY="306" width="128" height="150"/>
+        <element name="FactorEntity" positionX="-459" positionY="148" width="135" height="120"/>
         <element name="InteractionEntity" positionX="-342" positionY="-45" width="128" height="105"/>
+        <element name="LevelEntity" positionX="-270" positionY="108" width="128" height="270"/>
         <element name="SpeciesEntity" positionX="-74" positionY="153" width="128" height="195"/>
+        <element name="WinConditionEntity" positionX="-270" positionY="108" width="128" height="105"/>
     </elements>
 </model>

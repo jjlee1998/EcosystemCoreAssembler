@@ -2,7 +2,9 @@
 <!DOCTYPE plist PUBLIC -//Apple//DTD PLIST 1.0//EN http://www.apple.com/DTDs/PropertyList-1.0.dtd>
 <plist version=1.0>
 <dict>
-<key>rabbit.png</key><string>rabbit.png</string>
-<key>arcticwildflower.png</key><string>arcticwildflower.png</string>
-<key>wolf.png</key><string>wolf.png</string>
+<key>Arctic Hare</key><string>Arctic Hare.imageset</string>
+<key>Arctic Wildflower</key><string>Arctic Wildflower.imageset</string>
+<key>Grey Wolf</key><string>Grey Wolf.imageset</string>
+<key>Penguin</key><string>Penguin.imageset</string>
+<key>tundra</key><string>tundra.imageset</string>
 </dict></plist>

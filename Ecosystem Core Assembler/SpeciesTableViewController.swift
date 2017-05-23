@@ -9,16 +9,32 @@
 import UIKit
 import CoreData
 
-class SpeciesTableViewController: UITableViewController {
-    
-    var appDelegate: AppDelegate!
-    var assemblyManager: AssemblyManager!
-    var activeSpecies: SpeciesEntity?
+class SpeciesTableViewController: InteractionPrimaryTableViewController {
     
     override func viewDidLoad() {
         appDelegate = UIApplication.shared.delegate as! AppDelegate
         assemblyManager = appDelegate.assemblyManager
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "SpeciesCell")
+    }
+    
+    @IBAction func newSpecies(sender: Any) {
+        // Note: the createBlankSpeciesEntity automatically adds the new SpeciesEntity to the assemblyManager's ecosystem array, so we can access it without doing any other work.
+        activeSpecies = assemblyManager.createBlankSpeciesEntity()
+        refresh()
+        updateDetailViewController()
+    }
+    
+    override func updateDetailViewController() {
+        performSegue(withIdentifier: "displaySpeciesDetailSegue", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "displaySpeciesDetailSegue" {
+            if let detailVC = segue.destination as? SpeciesDetailViewController {
+                detailVC.speciesTableViewController = self
+                detailVC.activeSpecies = activeSpecies
+            }
+        }
     }
     
     @IBAction func toggleEditing(sender: UIBarButtonItem) {
@@ -32,56 +48,18 @@ class SpeciesTableViewController: UITableViewController {
         print("Toggling editing")
     }
     
-    @IBAction func newSpecies(sender: Any) {
-        activeSpecies = assemblyManager.createBlankSpeciesEntity()
-        refresh()
-        updateDetailViewController()
-    }
-    
-    override func numberOfSections(in tableView: UITableView) -> Int {return 1}
-    
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return assemblyManager.species.count
-    }
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let species = assemblyManager.species[indexPath.row]
+        let nextSpecies = species[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "SpeciesCell", for: indexPath)
-        cell.textLabel?.text = species.name
+        cell.textLabel?.text = nextSpecies.name
         return cell
     }
-    
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("Selected \(assemblyManager.species[indexPath.row].name ?? "<unknown species>")")
-        activeSpecies = assemblyManager.species[indexPath.row]
-        updateDetailViewController()
-    }
-    
-    func updateDetailViewController() {
-        performSegue(withIdentifier: "displaySpeciesDetailSegue", sender: self)
-        print("Attempting to update detail view controller")
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "displaySpeciesDetailSegue" {
-            if let detailVC = segue.destination as? SpeciesDetailViewController {
-                detailVC.speciesTableViewController = self
-                detailVC.activeSpecies = activeSpecies
-            }
-        }
-    }
-    
-    func refresh() {
-        assemblyManager.save()
-        self.tableView.reloadData()
-        tableView.selectRow(at: IndexPath(row: Int(assemblyManager.species.index(of: activeSpecies!)!), section: 0), animated: true, scrollPosition: .none)
-        print("Refresh!")
-    }
+
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             
-            let title = "Delete \(assemblyManager.species[indexPath.row].name!)?"
+            let title = "Delete \(species[indexPath.row].name!)?"
             let message = "This species' factors will be removed from all ecosystems, and its interactions with other species will be erased."
             let ac = UIAlertController(title: title, message: message, preferredStyle: .actionSheet)
             ac.popoverPresentationController?.sourceView = tableView
@@ -91,7 +69,7 @@ class SpeciesTableViewController: UITableViewController {
             ac.addAction(cancelAction)
             
             let deleteAction = UIAlertAction(title: "Delete", style: .destructive, handler: { (action) -> Void in
-                let speciesToDelete = self.assemblyManager.species[indexPath.row]
+                let speciesToDelete = self.species[indexPath.row]
                 if speciesToDelete == self.activeSpecies {
                     self.activeSpecies = nil
                     self.updateDetailViewController()

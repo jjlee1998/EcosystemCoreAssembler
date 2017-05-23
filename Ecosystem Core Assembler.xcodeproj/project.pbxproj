@@ -8,10 +8,25 @@
 
 /* Begin PBXBuildFile section */
 		0413CB9B1ECF353100632E12 /* files.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0413CB9A1ECF353100632E12 /* files.plist */; };
+		0413CBA01ECF640A00632E12 /* InteractionPrimaryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0413CB9F1ECF640A00632E12 /* InteractionPrimaryTableViewController.swift */; };
+		0413CBA31ECF667F00632E12 /* InteractionSecondaryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0413CBA21ECF667F00632E12 /* InteractionSecondaryTableViewController.swift */; };
+		0413CBA71ECF779E00632E12 /* InteractionDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0413CBA61ECF779E00632E12 /* InteractionDetailViewController.swift */; };
+		0413CBA91ECF83C900632E12 /* SecondarySpeciesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0413CBA81ECF83C900632E12 /* SecondarySpeciesCell.swift */; };
+		0426EDDF1ED4B979006559B3 /* CodableItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0426EDDE1ED4B979006559B3 /* CodableItems.swift */; };
+		0426EDE21ED4B98C006559B3 /* DomainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0426EDE11ED4B98C006559B3 /* DomainView.swift */; };
+		0426EDE41ED4B9B8006559B3 /* LevelDomainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0426EDE31ED4B9B8006559B3 /* LevelDomainViewController.swift */; };
+		0426EDE91ED4B9C1006559B3 /* LevelPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0426EDE51ED4B9C1006559B3 /* LevelPageViewController.swift */; };
+		0426EDEA1ED4B9C1006559B3 /* LevelPageWrapperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0426EDE61ED4B9C1006559B3 /* LevelPageWrapperViewController.swift */; };
+		0426EDEC1ED4B9C1006559B3 /* LevelTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0426EDE81ED4B9C1006559B3 /* LevelTextViewController.swift */; };
+		0426EDEF1ED4B9CA006559B3 /* LevelWinConditionDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0426EDED1ED4B9CA006559B3 /* LevelWinConditionDetailViewController.swift */; };
+		0426EDF01ED4B9CA006559B3 /* LevelWinConditionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0426EDEE1ED4B9CA006559B3 /* LevelWinConditionViewController.swift */; };
+		0426EDF21ED4B9D8006559B3 /* WinConditionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0426EDF11ED4B9D8006559B3 /* WinConditionCell.swift */; };
+		0426EDF41ED4BA31006559B3 /* LevelTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0426EDF31ED4BA31006559B3 /* LevelTableViewController.swift */; };
 		047E7D911ECE4F6300672054 /* SpeciesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047E7D901ECE4F6300672054 /* SpeciesTableViewController.swift */; };
 		047E7D941ECE51BC00672054 /* SpeciesDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047E7D931ECE51BC00672054 /* SpeciesDetailViewController.swift */; };
 		047F40C51ECD357D0032FFA3 /* EcosystemTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047F40C41ECD357D0032FFA3 /* EcosystemTableViewController.swift */; };
 		047F40C71ECD3B310032FFA3 /* EcosystemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047F40C61ECD3B310032FFA3 /* EcosystemDetailViewController.swift */; };
+		048A8EE61ED0DC25009991AF /* FactorTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048A8EE51ED0DC25009991AF /* FactorTableViewController.swift */; };
 		04AAB1D31EC631BF009C1D14 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AAB1D21EC631BF009C1D14 /* AppDelegate.swift */; };
 		04AAB1D51EC631BF009C1D14 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AAB1D41EC631BF009C1D14 /* MainViewController.swift */; };
 		04AAB1D81EC631BF009C1D14 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04AAB1D61EC631BF009C1D14 /* Main.storyboard */; };
@@ -20,16 +35,31 @@
 		04AAB1E01EC631BF009C1D14 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04AAB1DE1EC631BF009C1D14 /* LaunchScreen.storyboard */; };
 		04AAB1EA1EC631E0009C1D14 /* Factor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AAB1E71EC631E0009C1D14 /* Factor.swift */; };
 		04AAB1EB1EC631E0009C1D14 /* Ecosystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AAB1E81EC631E0009C1D14 /* Ecosystem.swift */; };
-		04AAB1EC1EC631E0009C1D14 /* FactorData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04AAB1E91EC631E0009C1D14 /* FactorData.plist */; };
+		04B1D7001ED0E8AF00FAC778 /* FactorDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B1D6FF1ED0E8AF00FAC778 /* FactorDetailViewController.swift */; };
 		04F02F5B1ECBE15700AEE8F0 /* AssemblyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F02F5A1ECBE15700AEE8F0 /* AssemblyManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0413CB9A1ECF353100632E12 /* files.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = files.plist; sourceTree = "<group>"; };
+		0413CB9F1ECF640A00632E12 /* InteractionPrimaryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InteractionPrimaryTableViewController.swift; sourceTree = "<group>"; };
+		0413CBA21ECF667F00632E12 /* InteractionSecondaryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InteractionSecondaryTableViewController.swift; sourceTree = "<group>"; };
+		0413CBA61ECF779E00632E12 /* InteractionDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InteractionDetailViewController.swift; sourceTree = "<group>"; };
+		0413CBA81ECF83C900632E12 /* SecondarySpeciesCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondarySpeciesCell.swift; sourceTree = "<group>"; };
+		0426EDDE1ED4B979006559B3 /* CodableItems.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodableItems.swift; sourceTree = "<group>"; };
+		0426EDE11ED4B98C006559B3 /* DomainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DomainView.swift; sourceTree = "<group>"; };
+		0426EDE31ED4B9B8006559B3 /* LevelDomainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelDomainViewController.swift; sourceTree = "<group>"; };
+		0426EDE51ED4B9C1006559B3 /* LevelPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelPageViewController.swift; sourceTree = "<group>"; };
+		0426EDE61ED4B9C1006559B3 /* LevelPageWrapperViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelPageWrapperViewController.swift; sourceTree = "<group>"; };
+		0426EDE81ED4B9C1006559B3 /* LevelTextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelTextViewController.swift; sourceTree = "<group>"; };
+		0426EDED1ED4B9CA006559B3 /* LevelWinConditionDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelWinConditionDetailViewController.swift; sourceTree = "<group>"; };
+		0426EDEE1ED4B9CA006559B3 /* LevelWinConditionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelWinConditionViewController.swift; sourceTree = "<group>"; };
+		0426EDF11ED4B9D8006559B3 /* WinConditionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WinConditionCell.swift; sourceTree = "<group>"; };
+		0426EDF31ED4BA31006559B3 /* LevelTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelTableViewController.swift; sourceTree = "<group>"; };
 		047E7D901ECE4F6300672054 /* SpeciesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeciesTableViewController.swift; sourceTree = "<group>"; };
 		047E7D931ECE51BC00672054 /* SpeciesDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeciesDetailViewController.swift; sourceTree = "<group>"; };
 		047F40C41ECD357D0032FFA3 /* EcosystemTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EcosystemTableViewController.swift; sourceTree = "<group>"; };
 		047F40C61ECD3B310032FFA3 /* EcosystemDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EcosystemDetailViewController.swift; sourceTree = "<group>"; };
+		048A8EE51ED0DC25009991AF /* FactorTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FactorTableViewController.swift; sourceTree = "<group>"; };
 		04AAB1CF1EC631BF009C1D14 /* Ecosystem Core Assembler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ecosystem Core Assembler.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04AAB1D21EC631BF009C1D14 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04AAB1D41EC631BF009C1D14 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -40,7 +70,7 @@
 		04AAB1E11EC631BF009C1D14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04AAB1E71EC631E0009C1D14 /* Factor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Factor.swift; sourceTree = "<group>"; };
 		04AAB1E81EC631E0009C1D14 /* Ecosystem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ecosystem.swift; sourceTree = "<group>"; };
-		04AAB1E91EC631E0009C1D14 /* FactorData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = FactorData.plist; sourceTree = "<group>"; };
+		04B1D6FF1ED0E8AF00FAC778 /* FactorDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FactorDetailViewController.swift; sourceTree = "<group>"; };
 		04F02F5A1ECBE15700AEE8F0 /* AssemblyManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssemblyManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -55,6 +85,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0413CBA11ECF641300632E12 /* InteractionManagerViews */ = {
+			isa = PBXGroup;
+			children = (
+				0413CB9F1ECF640A00632E12 /* InteractionPrimaryTableViewController.swift */,
+				0413CBA21ECF667F00632E12 /* InteractionSecondaryTableViewController.swift */,
+				0413CBA81ECF83C900632E12 /* SecondarySpeciesCell.swift */,
+				0413CBA61ECF779E00632E12 /* InteractionDetailViewController.swift */,
+			);
+			name = InteractionManagerViews;
+			sourceTree = "<group>";
+		};
+		0426EDE01ED4B97D006559B3 /* LevelManagerViews */ = {
+			isa = PBXGroup;
+			children = (
+				0426EDE61ED4B9C1006559B3 /* LevelPageWrapperViewController.swift */,
+				0426EDE51ED4B9C1006559B3 /* LevelPageViewController.swift */,
+				0426EDF31ED4BA31006559B3 /* LevelTableViewController.swift */,
+				0426EDE81ED4B9C1006559B3 /* LevelTextViewController.swift */,
+				0426EDDE1ED4B979006559B3 /* CodableItems.swift */,
+				0426EDE31ED4B9B8006559B3 /* LevelDomainViewController.swift */,
+				0426EDE11ED4B98C006559B3 /* DomainView.swift */,
+				0426EDED1ED4B9CA006559B3 /* LevelWinConditionDetailViewController.swift */,
+				0426EDEE1ED4B9CA006559B3 /* LevelWinConditionViewController.swift */,
+				0426EDF11ED4B9D8006559B3 /* WinConditionCell.swift */,
+			);
+			name = LevelManagerViews;
+			sourceTree = "<group>";
+		};
 		047E7D8F1ECE4F4700672054 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -78,6 +136,8 @@
 			children = (
 				047F40C41ECD357D0032FFA3 /* EcosystemTableViewController.swift */,
 				047F40C61ECD3B310032FFA3 /* EcosystemDetailViewController.swift */,
+				048A8EE51ED0DC25009991AF /* FactorTableViewController.swift */,
+				04B1D6FF1ED0E8AF00FAC778 /* FactorDetailViewController.swift */,
 			);
 			name = EcosystemManagerViews;
 			sourceTree = "<group>";
@@ -104,10 +164,11 @@
 				04AAB1D21EC631BF009C1D14 /* AppDelegate.swift */,
 				04AAB1D41EC631BF009C1D14 /* MainViewController.swift */,
 				04F02F5A1ECBE15700AEE8F0 /* AssemblyManager.swift */,
+				0413CBA11ECF641300632E12 /* InteractionManagerViews */,
 				047E7D921ECE503900672054 /* SpeciesManagerViews */,
 				049D60FF1ECD06F30064EFEE /* EcosystemManagerViews */,
+				0426EDE01ED4B97D006559B3 /* LevelManagerViews */,
 				047E7D8F1ECE4F4700672054 /* Model */,
-				04AAB1E91EC631E0009C1D14 /* FactorData.plist */,
 				04AAB1D61EC631BF009C1D14 /* Main.storyboard */,
 				04AAB1DC1EC631BF009C1D14 /* Assets.xcassets */,
 				04AAB1DE1EC631BF009C1D14 /* LaunchScreen.storyboard */,
@@ -151,6 +212,7 @@
 				TargetAttributes = {
 					04AAB1CE1EC631BF009C1D14 = {
 						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 9E3N9N6AL6;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -182,7 +244,6 @@
 				0413CB9B1ECF353100632E12 /* files.plist in Resources */,
 				04AAB1DD1EC631BF009C1D14 /* Assets.xcassets in Resources */,
 				04AAB1D81EC631BF009C1D14 /* Main.storyboard in Resources */,
-				04AAB1EC1EC631E0009C1D14 /* FactorData.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,7 +261,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "echo \"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<!DOCTYPE plist PUBLIC \"-//Apple//DTD PLIST 1.0//EN\" \"http://www.apple.com/DTDs/PropertyList-1.0.dtd\">\n<plist version=\"1.0\">\n<dict>\" >  \"${SRCROOT}/${PROJECT_NAME}/files.plist\";\n## Chnage Assets.xcassets if not using default one\nfind \"${SRCROOT}/${PROJECT_NAME}/Assets.xcassets\" -type f -not -iname \"*@*\" -name \"*.png\"  -exec basename {} \\; | while read line; do echo \\<key\\>$line\\</key\\>\\<string\\>$line\\</string\\>; done >> ${SRCROOT}/${PROJECT_NAME}/files.plist;\necho \"</dict></plist>\" >>  \"${SRCROOT}/${PROJECT_NAME}/files.plist\";";
+			shellScript = "echo \"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<!DOCTYPE plist PUBLIC \"-//Apple//DTD PLIST 1.0//EN\" \"http://www.apple.com/DTDs/PropertyList-1.0.dtd\">\n<plist version=\"1.0\">\n<dict>\" >  \"${SRCROOT}/${PROJECT_NAME}/files.plist\";\n## Chnage Assets.xcassets if not using default one\nfind \"${SRCROOT}/${PROJECT_NAME}/Assets.xcassets\" -type d -not -iname \"*@*\" -name \"*.imageset\"  -exec basename {} \\; | while read line; do echo \\<key\\>${line%.*}\\</key\\>\\<string\\>$line\\</string\\>; done >> ${SRCROOT}/${PROJECT_NAME}/files.plist;\necho \"</dict></plist>\" >>  \"${SRCROOT}/${PROJECT_NAME}/files.plist\";";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -211,14 +272,30 @@
 			files = (
 				04AAB1D51EC631BF009C1D14 /* MainViewController.swift in Sources */,
 				04AAB1D31EC631BF009C1D14 /* AppDelegate.swift in Sources */,
+				0413CBA71ECF779E00632E12 /* InteractionDetailViewController.swift in Sources */,
 				04AAB1EB1EC631E0009C1D14 /* Ecosystem.swift in Sources */,
 				047E7D911ECE4F6300672054 /* SpeciesTableViewController.swift in Sources */,
+				0426EDDF1ED4B979006559B3 /* CodableItems.swift in Sources */,
+				0426EDE91ED4B9C1006559B3 /* LevelPageViewController.swift in Sources */,
 				047F40C51ECD357D0032FFA3 /* EcosystemTableViewController.swift in Sources */,
+				0426EDF01ED4B9CA006559B3 /* LevelWinConditionViewController.swift in Sources */,
 				047F40C71ECD3B310032FFA3 /* EcosystemDetailViewController.swift in Sources */,
+				0413CBA91ECF83C900632E12 /* SecondarySpeciesCell.swift in Sources */,
+				0426EDEF1ED4B9CA006559B3 /* LevelWinConditionDetailViewController.swift in Sources */,
+				0426EDF21ED4B9D8006559B3 /* WinConditionCell.swift in Sources */,
+				04B1D7001ED0E8AF00FAC778 /* FactorDetailViewController.swift in Sources */,
 				047E7D941ECE51BC00672054 /* SpeciesDetailViewController.swift in Sources */,
+				0426EDEC1ED4B9C1006559B3 /* LevelTextViewController.swift in Sources */,
+				0426EDF41ED4BA31006559B3 /* LevelTableViewController.swift in Sources */,
 				04F02F5B1ECBE15700AEE8F0 /* AssemblyManager.swift in Sources */,
 				04AAB1EA1EC631E0009C1D14 /* Factor.swift in Sources */,
+				0426EDEA1ED4B9C1006559B3 /* LevelPageWrapperViewController.swift in Sources */,
+				0413CBA01ECF640A00632E12 /* InteractionPrimaryTableViewController.swift in Sources */,
+				0426EDE21ED4B98C006559B3 /* DomainView.swift in Sources */,
 				04AAB1DB1EC631BF009C1D14 /* Ecosystem_Core_Assembler.xcdatamodeld in Sources */,
+				0426EDE41ED4B9B8006559B3 /* LevelDomainViewController.swift in Sources */,
+				048A8EE61ED0DC25009991AF /* FactorTableViewController.swift in Sources */,
+				0413CBA31ECF667F00632E12 /* InteractionSecondaryTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,11 +420,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 9E3N9N6AL6;
 				INFOPLIST_FILE = "Ecosystem Core Assembler/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "jjlee1998.Ecosystem-Core-Assembler";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -355,11 +434,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 9E3N9N6AL6;
 				INFOPLIST_FILE = "Ecosystem Core Assembler/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "jjlee1998.Ecosystem-Core-Assembler";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
