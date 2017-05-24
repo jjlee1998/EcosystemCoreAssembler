@@ -22,6 +22,16 @@ class FactorDetailViewController: UIViewController, UITextFieldDelegate, UIPicke
         }
     }
     
+    var baseSplitVC: UIViewController? {
+        return (self.splitViewController?.splitViewController)
+    }
+    
+    func setViewVerticalOffset(_ offset: CGFloat) {
+        var rect: CGRect = baseSplitVC!.view.frame
+        rect.origin.y = -offset
+        baseSplitVC?.view.frame = rect
+    }
+    
     override func viewDidLoad() {
         self.view.isHidden = true
     }
@@ -72,6 +82,7 @@ class FactorDetailViewController: UIViewController, UITextFieldDelegate, UIPicke
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
         textField.backgroundColor = UIColor.white
+        setViewVerticalOffset(self.view.frame.height)
     }
     
     func textFieldDidEndEditing(_ textField: UITextField, reason: UITextFieldDidEndEditingReason) {
@@ -79,6 +90,7 @@ class FactorDetailViewController: UIViewController, UITextFieldDelegate, UIPicke
             activeFactor?.level = Double(levelTextField.text!)!
             factorTableVC?.refresh()
         }
+        setViewVerticalOffset(0)
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

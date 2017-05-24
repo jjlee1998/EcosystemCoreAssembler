@@ -13,6 +13,7 @@ class FactorTableViewController: UITableViewController {
     
     var appDelegate: AppDelegate!
     var assemblyManager: AssemblyManager!
+    var detailVC: FactorDetailViewController?
     var activeEcosystem: EcosystemEntity? {
         didSet {
             tableView.reloadData()

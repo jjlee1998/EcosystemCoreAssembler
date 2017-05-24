@@ -60,6 +60,10 @@
         <relationship name="activeFactorEntities" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="FactorEntity" inverseName="speciesEntity" inverseEntity="FactorEntity" syncable="YES"/>
         <relationship name="directorateEntity" maxCount="1" deletionRule="Nullify" destinationEntity="DirectorateEntity" inverseName="speciesEntities" inverseEntity="DirectorateEntity" syncable="YES"/>
         <relationship name="interactionEntities" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="InteractionEntity" inverseName="species" inverseEntity="InteractionEntity" syncable="YES"/>
+        <relationship name="toolboxEntity" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ToolboxEntity" inverseName="unlockedSpecies" inverseEntity="ToolboxEntity" syncable="YES"/>
+    </entity>
+    <entity name="ToolboxEntity" representedClassName="ToolboxEntity" syncable="YES" codeGenerationType="class">
+        <relationship name="unlockedSpecies" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="SpeciesEntity" inverseName="toolboxEntity" inverseEntity="SpeciesEntity" syncable="YES"/>
     </entity>
     <entity name="WinConditionEntity" representedClassName="WinConditionEntity" syncable="YES" codeGenerationType="class">
         <attribute name="greaterThan" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
@@ -73,7 +77,8 @@
         <element name="FactorEntity" positionX="-459" positionY="148" width="135" height="120"/>
         <element name="InteractionEntity" positionX="-342" positionY="-45" width="128" height="105"/>
         <element name="LevelEntity" positionX="-270" positionY="108" width="128" height="270"/>
-        <element name="SpeciesEntity" positionX="-74" positionY="153" width="128" height="195"/>
+        <element name="SpeciesEntity" positionX="-74" positionY="153" width="128" height="210"/>
         <element name="WinConditionEntity" positionX="-270" positionY="108" width="128" height="105"/>
+        <element name="ToolboxEntity" positionX="-270" positionY="108" width="128" height="60"/>
     </elements>
 </model>

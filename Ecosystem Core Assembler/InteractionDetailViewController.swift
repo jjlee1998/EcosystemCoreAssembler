@@ -119,7 +119,19 @@ class InteractionDetailViewController: UIViewController, UITextFieldDelegate {
     }
     
     
+    
+    
     // TEXT FIELD HANDLING
+    
+    var baseSplitVC: UIViewController? {
+        return (self.splitViewController?.splitViewController)
+    }
+    
+    func setViewVerticalOffset(_ offset: CGFloat) {
+        var rect: CGRect = baseSplitVC!.view.frame
+        rect.origin.y = -offset
+        baseSplitVC?.view.frame = rect
+    }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         if textField == coeff1TextField || textField == coeff2TextField {
@@ -138,6 +150,9 @@ class InteractionDetailViewController: UIViewController, UITextFieldDelegate {
     func textFieldDidBeginEditing(_ textField: UITextField) {
         textField.backgroundColor = UIColor.white
         activeTextField = textField
+        if textField == coeff2TextField {
+            setViewVerticalOffset(self.view.frame.height / 2)
+        }
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -160,7 +175,7 @@ class InteractionDetailViewController: UIViewController, UITextFieldDelegate {
             assemblyManager?.delete(entity: interaction!)  // Because of the cascade effect, this will also destroy the conjugate
             interactionSecondaryTableViewController.refresh()
         }
-        
+        setViewVerticalOffset(0)
     }
     
     @discardableResult func checkLegalityOf(textField: UITextField) -> Bool {
@@ -176,6 +191,7 @@ class InteractionDetailViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func dismissKeyboard(sender: AnyObject) {
         _ = activeTextField?.resignFirstResponder()
+        setViewVerticalOffset(CGFloat(0.0))
         activeTextField = nil
     }
     

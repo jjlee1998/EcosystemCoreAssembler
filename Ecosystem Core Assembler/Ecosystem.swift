@@ -70,6 +70,36 @@ class Ecosystem: CustomStringConvertible, FactorDelegate {
         }
     }
     
+    func getSunlight() -> Factor? {
+        var sunlight: Factor? = nil
+        for (factor, _) in factors {
+            if factor.name == "Sunlight" {
+                sunlight = factor
+            }
+        }
+        return sunlight
+    }
+    
+    func getRainfall() -> Factor? {
+        var rainfall: Factor? = nil
+        for (factor, _) in factors {
+            if factor.name == "Rainfall" {
+                rainfall = factor
+            }
+        }
+        return rainfall
+    }
+    
+    func getTemperature() -> Factor? {
+        var temperature: Factor? = nil
+        for (factor, _) in factors {
+            if factor.name == "Temperature" {
+                temperature = factor
+            }
+        }
+        return temperature
+    }
+    
     var description: String {return name}
     var currentState: String {return factors.reduce("", {$0 + "\t \($1.0.name): \($1.0.level)"})}
     var diagnostics: String {

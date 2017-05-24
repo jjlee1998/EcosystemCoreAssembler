@@ -36,6 +36,12 @@ class LevelTextViewController: UIViewController, UITextFieldDelegate, UITextView
         activeTextField = textField
     }
     
+    func setViewVerticalOffset(_ offset: CGFloat) {
+        var rect: CGRect = self.view.frame
+        rect.origin.y = -offset
+        self.view.frame = rect
+    }
+    
     func textFieldDidEndEditing(_ textField: UITextField) {
         if textField == levelTitle && textField.text == "" {
             textField.backgroundColor = UIColor.red
@@ -63,6 +69,9 @@ class LevelTextViewController: UIViewController, UITextFieldDelegate, UITextView
     
     func textViewDidBeginEditing(_ textView: UITextView) {
         activeTextView = textView
+        if textView == introText || textView == outroText {
+            setViewVerticalOffset(self.view.frame.height / 2)
+        }
     }
     
     func textViewDidEndEditing(_ textView: UITextView) {
@@ -74,10 +83,12 @@ class LevelTextViewController: UIViewController, UITextFieldDelegate, UITextView
         default:
             break
         }
+        setViewVerticalOffset(0)
         assemblyManager.save()
     }
     
     @IBAction func dismissKeyboard() {
+        setViewVerticalOffset(0)
         _ = activeTextField?.resignFirstResponder()
         _ = activeTextView?.resignFirstResponder()
     }

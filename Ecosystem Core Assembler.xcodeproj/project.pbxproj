@@ -29,13 +29,30 @@
 		048A8EE61ED0DC25009991AF /* FactorTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048A8EE51ED0DC25009991AF /* FactorTableViewController.swift */; };
 		04AAB1D31EC631BF009C1D14 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AAB1D21EC631BF009C1D14 /* AppDelegate.swift */; };
 		04AAB1D51EC631BF009C1D14 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AAB1D41EC631BF009C1D14 /* MainViewController.swift */; };
-		04AAB1D81EC631BF009C1D14 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04AAB1D61EC631BF009C1D14 /* Main.storyboard */; };
+		04AAB1D81EC631BF009C1D14 /* CoreAssembler.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04AAB1D61EC631BF009C1D14 /* CoreAssembler.storyboard */; };
 		04AAB1DB1EC631BF009C1D14 /* Ecosystem_Core_Assembler.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 04AAB1D91EC631BF009C1D14 /* Ecosystem_Core_Assembler.xcdatamodeld */; };
 		04AAB1DD1EC631BF009C1D14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04AAB1DC1EC631BF009C1D14 /* Assets.xcassets */; };
 		04AAB1E01EC631BF009C1D14 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04AAB1DE1EC631BF009C1D14 /* LaunchScreen.storyboard */; };
 		04AAB1EA1EC631E0009C1D14 /* Factor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AAB1E71EC631E0009C1D14 /* Factor.swift */; };
 		04AAB1EB1EC631E0009C1D14 /* Ecosystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AAB1E81EC631E0009C1D14 /* Ecosystem.swift */; };
 		04B1D7001ED0E8AF00FAC778 /* FactorDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B1D6FF1ED0E8AF00FAC778 /* FactorDetailViewController.swift */; };
+		04D557461ED4DE96001CC8C6 /* Levels.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04D557441ED4DE96001CC8C6 /* Levels.storyboard */; };
+		04D557481ED4DEEB001CC8C6 /* Interactions.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04D557471ED4DEEB001CC8C6 /* Interactions.storyboard */; };
+		04D5574B1ED4DF1F001CC8C6 /* Species.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04D557491ED4DF1F001CC8C6 /* Species.storyboard */; };
+		04D5574D1ED4DF64001CC8C6 /* Ecosystems.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04D5574C1ED4DF64001CC8C6 /* Ecosystems.storyboard */; };
+		04D557581ED4E056001CC8C6 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 04D5574F1ED4E056001CC8C6 /* GameScene.sks */; };
+		04D557591ED4E056001CC8C6 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 04D557501ED4E056001CC8C6 /* Actions.sks */; };
+		04D5575A1ED4E056001CC8C6 /* SKSliderNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D557511ED4E056001CC8C6 /* SKSliderNode.swift */; };
+		04D5575B1ED4E056001CC8C6 /* Rain.sks in Resources */ = {isa = PBXBuildFile; fileRef = 04D557521ED4E056001CC8C6 /* Rain.sks */; };
+		04D5575C1ED4E056001CC8C6 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D557531ED4E056001CC8C6 /* GameScene.swift */; };
+		04D5575D1ED4E056001CC8C6 /* SKOrganismNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D557541ED4E056001CC8C6 /* SKOrganismNode.swift */; };
+		04D5575E1ED4E056001CC8C6 /* EcosystemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D557551ED4E056001CC8C6 /* EcosystemViewController.swift */; };
+		04D5575F1ED4E056001CC8C6 /* TitleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D557561ED4E056001CC8C6 /* TitleViewController.swift */; };
+		04D557601ED4E056001CC8C6 /* LevelSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D557571ED4E056001CC8C6 /* LevelSelectionViewController.swift */; };
+		04D557621ED4E11D001CC8C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04D557611ED4E11D001CC8C6 /* Main.storyboard */; };
+		04D557641ED4EB88001CC8C6 /* LevelDisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D557631ED4EB88001CC8C6 /* LevelDisplayViewController.swift */; };
+		04D557661ED50DB5001CC8C6 /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D557651ED50DB5001CC8C6 /* Level.swift */; };
+		04D557681ED52358001CC8C6 /* InteractionSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D557671ED52358001CC8C6 /* InteractionSplitViewController.swift */; };
 		04F02F5B1ECBE15700AEE8F0 /* AssemblyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F02F5A1ECBE15700AEE8F0 /* AssemblyManager.swift */; };
 /* End PBXBuildFile section */
 
@@ -63,7 +80,7 @@
 		04AAB1CF1EC631BF009C1D14 /* Ecosystem Core Assembler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ecosystem Core Assembler.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04AAB1D21EC631BF009C1D14 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04AAB1D41EC631BF009C1D14 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		04AAB1D71EC631BF009C1D14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		04AAB1D71EC631BF009C1D14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/CoreAssembler.storyboard; sourceTree = "<group>"; };
 		04AAB1DA1EC631BF009C1D14 /* Ecosystem_Core_Assembler.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Ecosystem_Core_Assembler.xcdatamodel; sourceTree = "<group>"; };
 		04AAB1DC1EC631BF009C1D14 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04AAB1DF1EC631BF009C1D14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -71,6 +88,23 @@
 		04AAB1E71EC631E0009C1D14 /* Factor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Factor.swift; sourceTree = "<group>"; };
 		04AAB1E81EC631E0009C1D14 /* Ecosystem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ecosystem.swift; sourceTree = "<group>"; };
 		04B1D6FF1ED0E8AF00FAC778 /* FactorDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FactorDetailViewController.swift; sourceTree = "<group>"; };
+		04D557451ED4DE96001CC8C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Levels.storyboard; sourceTree = "<group>"; };
+		04D557471ED4DEEB001CC8C6 /* Interactions.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Interactions.storyboard; sourceTree = "<group>"; };
+		04D5574A1ED4DF1F001CC8C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Species.storyboard; sourceTree = "<group>"; };
+		04D5574C1ED4DF64001CC8C6 /* Ecosystems.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Ecosystems.storyboard; sourceTree = "<group>"; };
+		04D5574F1ED4E056001CC8C6 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		04D557501ED4E056001CC8C6 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
+		04D557511ED4E056001CC8C6 /* SKSliderNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKSliderNode.swift; sourceTree = "<group>"; };
+		04D557521ED4E056001CC8C6 /* Rain.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Rain.sks; sourceTree = "<group>"; };
+		04D557531ED4E056001CC8C6 /* GameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		04D557541ED4E056001CC8C6 /* SKOrganismNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKOrganismNode.swift; sourceTree = "<group>"; };
+		04D557551ED4E056001CC8C6 /* EcosystemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EcosystemViewController.swift; sourceTree = "<group>"; };
+		04D557561ED4E056001CC8C6 /* TitleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleViewController.swift; sourceTree = "<group>"; };
+		04D557571ED4E056001CC8C6 /* LevelSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelSelectionViewController.swift; sourceTree = "<group>"; };
+		04D557611ED4E11D001CC8C6 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		04D557631ED4EB88001CC8C6 /* LevelDisplayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelDisplayViewController.swift; sourceTree = "<group>"; };
+		04D557651ED50DB5001CC8C6 /* Level.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Level.swift; sourceTree = "<group>"; };
+		04D557671ED52358001CC8C6 /* InteractionSplitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InteractionSplitViewController.swift; sourceTree = "<group>"; };
 		04F02F5A1ECBE15700AEE8F0 /* AssemblyManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssemblyManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -88,6 +122,8 @@
 		0413CBA11ECF641300632E12 /* InteractionManagerViews */ = {
 			isa = PBXGroup;
 			children = (
+				04D557471ED4DEEB001CC8C6 /* Interactions.storyboard */,
+				04D557671ED52358001CC8C6 /* InteractionSplitViewController.swift */,
 				0413CB9F1ECF640A00632E12 /* InteractionPrimaryTableViewController.swift */,
 				0413CBA21ECF667F00632E12 /* InteractionSecondaryTableViewController.swift */,
 				0413CBA81ECF83C900632E12 /* SecondarySpeciesCell.swift */,
@@ -99,6 +135,7 @@
 		0426EDE01ED4B97D006559B3 /* LevelManagerViews */ = {
 			isa = PBXGroup;
 			children = (
+				04D557441ED4DE96001CC8C6 /* Levels.storyboard */,
 				0426EDE61ED4B9C1006559B3 /* LevelPageWrapperViewController.swift */,
 				0426EDE51ED4B9C1006559B3 /* LevelPageViewController.swift */,
 				0426EDF31ED4BA31006559B3 /* LevelTableViewController.swift */,
@@ -118,6 +155,7 @@
 			children = (
 				04AAB1E71EC631E0009C1D14 /* Factor.swift */,
 				04AAB1E81EC631E0009C1D14 /* Ecosystem.swift */,
+				04D557651ED50DB5001CC8C6 /* Level.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -125,6 +163,7 @@
 		047E7D921ECE503900672054 /* SpeciesManagerViews */ = {
 			isa = PBXGroup;
 			children = (
+				04D557491ED4DF1F001CC8C6 /* Species.storyboard */,
 				047E7D901ECE4F6300672054 /* SpeciesTableViewController.swift */,
 				047E7D931ECE51BC00672054 /* SpeciesDetailViewController.swift */,
 			);
@@ -134,6 +173,7 @@
 		049D60FF1ECD06F30064EFEE /* EcosystemManagerViews */ = {
 			isa = PBXGroup;
 			children = (
+				04D5574C1ED4DF64001CC8C6 /* Ecosystems.storyboard */,
 				047F40C41ECD357D0032FFA3 /* EcosystemTableViewController.swift */,
 				047F40C61ECD3B310032FFA3 /* EcosystemDetailViewController.swift */,
 				048A8EE51ED0DC25009991AF /* FactorTableViewController.swift */,
@@ -162,14 +202,20 @@
 			isa = PBXGroup;
 			children = (
 				04AAB1D21EC631BF009C1D14 /* AppDelegate.swift */,
-				04AAB1D41EC631BF009C1D14 /* MainViewController.swift */,
 				04F02F5A1ECBE15700AEE8F0 /* AssemblyManager.swift */,
-				0413CBA11ECF641300632E12 /* InteractionManagerViews */,
-				047E7D921ECE503900672054 /* SpeciesManagerViews */,
-				049D60FF1ECD06F30064EFEE /* EcosystemManagerViews */,
-				0426EDE01ED4B97D006559B3 /* LevelManagerViews */,
+				04D5574F1ED4E056001CC8C6 /* GameScene.sks */,
+				04D557501ED4E056001CC8C6 /* Actions.sks */,
+				04D557511ED4E056001CC8C6 /* SKSliderNode.swift */,
+				04D557521ED4E056001CC8C6 /* Rain.sks */,
+				04D557531ED4E056001CC8C6 /* GameScene.swift */,
+				04D557541ED4E056001CC8C6 /* SKOrganismNode.swift */,
+				04D557551ED4E056001CC8C6 /* EcosystemViewController.swift */,
+				04D557561ED4E056001CC8C6 /* TitleViewController.swift */,
+				04D557571ED4E056001CC8C6 /* LevelSelectionViewController.swift */,
+				04D557631ED4EB88001CC8C6 /* LevelDisplayViewController.swift */,
+				04D557611ED4E11D001CC8C6 /* Main.storyboard */,
+				04D5574E1ED4DFF0001CC8C6 /* EcosystemCoreAssembler */,
 				047E7D8F1ECE4F4700672054 /* Model */,
-				04AAB1D61EC631BF009C1D14 /* Main.storyboard */,
 				04AAB1DC1EC631BF009C1D14 /* Assets.xcassets */,
 				04AAB1DE1EC631BF009C1D14 /* LaunchScreen.storyboard */,
 				04AAB1E11EC631BF009C1D14 /* Info.plist */,
@@ -177,6 +223,19 @@
 				0413CB9A1ECF353100632E12 /* files.plist */,
 			);
 			path = "Ecosystem Core Assembler";
+			sourceTree = "<group>";
+		};
+		04D5574E1ED4DFF0001CC8C6 /* EcosystemCoreAssembler */ = {
+			isa = PBXGroup;
+			children = (
+				04AAB1D41EC631BF009C1D14 /* MainViewController.swift */,
+				04AAB1D61EC631BF009C1D14 /* CoreAssembler.storyboard */,
+				0413CBA11ECF641300632E12 /* InteractionManagerViews */,
+				047E7D921ECE503900672054 /* SpeciesManagerViews */,
+				049D60FF1ECD06F30064EFEE /* EcosystemManagerViews */,
+				0426EDE01ED4B97D006559B3 /* LevelManagerViews */,
+			);
+			name = EcosystemCoreAssembler;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,10 +299,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04D557461ED4DE96001CC8C6 /* Levels.storyboard in Resources */,
+				04D5575B1ED4E056001CC8C6 /* Rain.sks in Resources */,
 				04AAB1E01EC631BF009C1D14 /* LaunchScreen.storyboard in Resources */,
+				04D557621ED4E11D001CC8C6 /* Main.storyboard in Resources */,
 				0413CB9B1ECF353100632E12 /* files.plist in Resources */,
+				04D5574D1ED4DF64001CC8C6 /* Ecosystems.storyboard in Resources */,
 				04AAB1DD1EC631BF009C1D14 /* Assets.xcassets in Resources */,
-				04AAB1D81EC631BF009C1D14 /* Main.storyboard in Resources */,
+				04D5574B1ED4DF1F001CC8C6 /* Species.storyboard in Resources */,
+				04AAB1D81EC631BF009C1D14 /* CoreAssembler.storyboard in Resources */,
+				04D557581ED4E056001CC8C6 /* GameScene.sks in Resources */,
+				04D557481ED4DEEB001CC8C6 /* Interactions.storyboard in Resources */,
+				04D557591ED4E056001CC8C6 /* Actions.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,8 +337,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04D557661ED50DB5001CC8C6 /* Level.swift in Sources */,
 				04AAB1D51EC631BF009C1D14 /* MainViewController.swift in Sources */,
 				04AAB1D31EC631BF009C1D14 /* AppDelegate.swift in Sources */,
+				04D557601ED4E056001CC8C6 /* LevelSelectionViewController.swift in Sources */,
+				04D5575F1ED4E056001CC8C6 /* TitleViewController.swift in Sources */,
 				0413CBA71ECF779E00632E12 /* InteractionDetailViewController.swift in Sources */,
 				04AAB1EB1EC631E0009C1D14 /* Ecosystem.swift in Sources */,
 				047E7D911ECE4F6300672054 /* SpeciesTableViewController.swift in Sources */,
@@ -290,11 +360,17 @@
 				04F02F5B1ECBE15700AEE8F0 /* AssemblyManager.swift in Sources */,
 				04AAB1EA1EC631E0009C1D14 /* Factor.swift in Sources */,
 				0426EDEA1ED4B9C1006559B3 /* LevelPageWrapperViewController.swift in Sources */,
+				04D5575A1ED4E056001CC8C6 /* SKSliderNode.swift in Sources */,
+				04D557641ED4EB88001CC8C6 /* LevelDisplayViewController.swift in Sources */,
+				04D557681ED52358001CC8C6 /* InteractionSplitViewController.swift in Sources */,
+				04D5575E1ED4E056001CC8C6 /* EcosystemViewController.swift in Sources */,
 				0413CBA01ECF640A00632E12 /* InteractionPrimaryTableViewController.swift in Sources */,
+				04D5575D1ED4E056001CC8C6 /* SKOrganismNode.swift in Sources */,
 				0426EDE21ED4B98C006559B3 /* DomainView.swift in Sources */,
 				04AAB1DB1EC631BF009C1D14 /* Ecosystem_Core_Assembler.xcdatamodeld in Sources */,
 				0426EDE41ED4B9B8006559B3 /* LevelDomainViewController.swift in Sources */,
 				048A8EE61ED0DC25009991AF /* FactorTableViewController.swift in Sources */,
+				04D5575C1ED4E056001CC8C6 /* GameScene.swift in Sources */,
 				0413CBA31ECF667F00632E12 /* InteractionSecondaryTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -302,12 +378,12 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		04AAB1D61EC631BF009C1D14 /* Main.storyboard */ = {
+		04AAB1D61EC631BF009C1D14 /* CoreAssembler.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				04AAB1D71EC631BF009C1D14 /* Base */,
 			);
-			name = Main.storyboard;
+			name = CoreAssembler.storyboard;
 			sourceTree = "<group>";
 		};
 		04AAB1DE1EC631BF009C1D14 /* LaunchScreen.storyboard */ = {
@@ -316,6 +392,22 @@
 				04AAB1DF1EC631BF009C1D14 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		04D557441ED4DE96001CC8C6 /* Levels.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				04D557451ED4DE96001CC8C6 /* Base */,
+			);
+			name = Levels.storyboard;
+			sourceTree = "<group>";
+		};
+		04D557491ED4DF1F001CC8C6 /* Species.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				04D5574A1ED4DF1F001CC8C6 /* Base */,
+			);
+			name = Species.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -422,6 +514,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 9E3N9N6AL6;
 				INFOPLIST_FILE = "Ecosystem Core Assembler/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "jjlee1998.Ecosystem-Core-Assembler";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -436,6 +529,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 9E3N9N6AL6;
 				INFOPLIST_FILE = "Ecosystem Core Assembler/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "jjlee1998.Ecosystem-Core-Assembler";
 				PRODUCT_NAME = "$(TARGET_NAME)";

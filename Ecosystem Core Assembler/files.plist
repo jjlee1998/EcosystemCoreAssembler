@@ -2,9 +2,28 @@
 <!DOCTYPE plist PUBLIC -//Apple//DTD PLIST 1.0//EN http://www.apple.com/DTDs/PropertyList-1.0.dtd>
 <plist version=1.0>
 <dict>
+<key>addflowerbutton</key><string>addflowerbutton.imageset</string>
+<key>addrabbitbutton</key><string>addrabbitbutton.imageset</string>
+<key>addwolfbutton</key><string>addwolfbutton.imageset</string>
 <key>Arctic Hare</key><string>Arctic Hare.imageset</string>
 <key>Arctic Wildflower</key><string>Arctic Wildflower.imageset</string>
+<key>deleteflowerbutton</key><string>deleteflowerbutton.imageset</string>
+<key>deleterabbitbutton</key><string>deleterabbitbutton.imageset</string>
+<key>deletewolfbutton</key><string>deletewolfbutton.imageset</string>
 <key>Grey Wolf</key><string>Grey Wolf.imageset</string>
+<key>mountain</key><string>mountain.imageset</string>
+<key>mountainbutton</key><string>mountainbutton.imageset</string>
 <key>Penguin</key><string>Penguin.imageset</string>
+<key>playbutton</key><string>playbutton.imageset</string>
+<key>rain</key><string>rain.imageset</string>
+<key>rainclouds</key><string>rainclouds.imageset</string>
+<key>RainfallSliderThumb</key><string>RainfallSliderThumb.imageset</string>
+<key>settingsbutton</key><string>settingsbutton.imageset</string>
+<key>SliderScale</key><string>SliderScale.imageset</string>
+<key>SliderThumb</key><string>SliderThumb.imageset</string>
+<key>sun</key><string>sun.imageset</string>
+<key>SunlightSliderThumb</key><string>SunlightSliderThumb.imageset</string>
+<key>TemperatureSliderThumb</key><string>TemperatureSliderThumb.imageset</string>
+<key>toolboxbutton</key><string>toolboxbutton.imageset</string>
 <key>tundra</key><string>tundra.imageset</string>
 </dict></plist>

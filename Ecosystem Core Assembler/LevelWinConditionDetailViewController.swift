@@ -32,6 +32,16 @@ class LevelWinConditionDetailViewController: UIViewController, UIPickerViewDeleg
         updateContent()
     }
     
+    var baseSplitVC: UIViewController {
+        return self.splitViewController!
+    }
+    
+    func setViewVerticalOffset(_ offset: CGFloat) {
+        var rect: CGRect = baseSplitVC.view.frame
+        rect.origin.y = -offset
+        baseSplitVC.view.frame = rect
+    }
+    
     var availableFactors = [FactorEntity]()
 
     func updateContent() {
@@ -93,6 +103,7 @@ class LevelWinConditionDetailViewController: UIViewController, UIPickerViewDeleg
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
         textField.backgroundColor = UIColor.white
+        setViewVerticalOffset(baseSplitVC.view.frame.height / 2)
     }
     
     func textFieldDidEndEditing(_ textField: UITextField, reason: UITextFieldDidEndEditingReason) {
@@ -118,6 +129,7 @@ class LevelWinConditionDetailViewController: UIViewController, UIPickerViewDeleg
     
     @IBAction func dismissKeyboard(sender: Any) {
         _ = thresholdTextField.resignFirstResponder()
+        setViewVerticalOffset(0)
     }
     
     

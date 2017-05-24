@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Cgf-zC-3DA">
+    <device id="ipad9_7" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Level Selection View Controller-->
+        <scene sceneID="4fa-T5-Hqc">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="KvJ-Zg-pAW" customClass="LevelSelectionViewController" customModule="Ecosystem_Core_Assembler" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J9L-Le-Nqg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-638" y="-1141"/>
+        </scene>
+        <!--Title View Controller-->
+        <scene sceneID="aZl-Ie-AxS">
+            <objects>
+                <viewController id="Cgf-zC-3DA" customClass="TitleViewController" customModule="Ecosystem_Core_Assembler" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="S0M-Wn-xO4"/>
+                        <viewControllerLayoutGuide type="bottom" id="zxR-ny-n1D"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="NFf-0D-dA3">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.75" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tundra" translatesAutoresizingMaskIntoConstraints="NO" id="zU3-Ru-fue">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="riT-4J-qXD">
+                                <rect key="frame" x="207.5" y="166" width="609" height="436.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ECOLO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O6t-6D-pP2">
+                                        <rect key="frame" x="0.0" y="0.0" width="609" height="239.5"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="175"/>
+                                        <color key="textColor" red="0.99607473611831665" green="0.99220293760299683" blue="0.99199241399765015" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9da-N4-Yhf">
+                                        <rect key="frame" x="215.5" y="239.5" width="178" height="116"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="76"/>
+                                        <state key="normal" title="PLAY"/>
+                                        <connections>
+                                            <segue destination="KvJ-Zg-pAW" kind="presentation" modalTransitionStyle="crossDissolve" id="sJE-96-Xbf"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qqj-73-Szm">
+                                        <rect key="frame" x="212.5" y="355.5" width="184" height="81"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="50"/>
+                                        <state key="normal" title="Settings">
+                                            <color key="titleColor" red="0.99607473611831665" green="0.99220293760299683" blue="0.99199241399765015" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="b2c-QK-Y3S" kind="presentation" modalTransitionStyle="crossDissolve" id="QrB-gg-skq"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="riT-4J-qXD" firstAttribute="centerY" secondItem="NFf-0D-dA3" secondAttribute="centerY" id="7Hb-tE-GI3"/>
+                            <constraint firstItem="riT-4J-qXD" firstAttribute="centerX" secondItem="NFf-0D-dA3" secondAttribute="centerX" id="X8j-mH-eYZ"/>
+                            <constraint firstItem="zU3-Ru-fue" firstAttribute="height" secondItem="NFf-0D-dA3" secondAttribute="height" id="dKV-Lh-Hve"/>
+                            <constraint firstItem="zU3-Ru-fue" firstAttribute="centerY" secondItem="NFf-0D-dA3" secondAttribute="centerY" id="h0o-0Z-iE2"/>
+                            <constraint firstItem="zU3-Ru-fue" firstAttribute="width" secondItem="NFf-0D-dA3" secondAttribute="width" id="iFr-yE-27x"/>
+                            <constraint firstItem="zU3-Ru-fue" firstAttribute="centerX" secondItem="NFf-0D-dA3" secondAttribute="centerX" id="vcN-PD-Gft"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="gameTitle" destination="O6t-6D-pP2" id="8lR-8Q-zFR"/>
+                        <outlet property="playButton" destination="9da-N4-Yhf" id="jFc-Bp-VD7"/>
+                        <outlet property="settingsButton" destination="Qqj-73-Szm" id="CTt-iS-WV9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RaA-9W-bmP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1864" y="-814"/>
+        </scene>
+        <!--CoreAssembler-->
+        <scene sceneID="hLA-pI-T5Q">
+            <objects>
+                <viewControllerPlaceholder storyboardName="CoreAssembler" id="b2c-QK-Y3S" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Apu-aj-qWo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1864" y="-320"/>
+        </scene>
+        <!--Level Display View Controller-->
+        <scene sceneID="5gL-rw-w0P">
+            <objects>
+                <viewController storyboardIdentifier="LevelDisplayViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Hqe-6W-lox" customClass="LevelDisplayViewController" customModule="Ecosystem_Core_Assembler" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ozO-gV-HaO"/>
+                        <viewControllerLayoutGuide type="bottom" id="0Co-sT-QQQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wBT-o9-cez">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GMm-vg-YLn">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="aax-mU-Td2">
+                                <rect key="frame" x="387.5" y="274.5" width="250.5" height="219"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Level 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fUS-d4-Wd9">
+                                        <rect key="frame" x="77" y="0.0" width="96.5" height="41"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
+                                        <color key="textColor" red="0.99607473609999997" green="0.9922029376" blue="0.99199241400000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TITLE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" translatesAutoresizingMaskIntoConstraints="NO" id="l5U-Ub-ZCt">
+                                        <rect key="frame" x="0.0" y="41" width="250.5" height="137"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="100"/>
+                                        <color key="textColor" red="0.99607473609999997" green="0.9922029376" blue="0.99199241400000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subtitle" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hq8-R9-vCH">
+                                        <rect key="frame" x="72.5" y="178" width="105" height="41"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="30"/>
+                                        <color key="textColor" red="0.99607473609999997" green="0.9922029376" blue="0.99199241400000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eCF-xm-Ocm">
+                                <rect key="frame" x="462" y="578" width="100" height="100"/>
+                                <state key="normal" image="playbutton"/>
+                                <connections>
+                                    <action selector="launchLevelWithSender:" destination="Hqe-6W-lox" eventType="touchUpInside" id="nfa-gI-TA9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w3j-hs-ova">
+                                <rect key="frame" x="12" y="17" width="166" height="36"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                <state key="normal" title="Return to Title Screen"/>
+                                <connections>
+                                    <segue destination="JyY-et-OBP" kind="unwind" unwindAction="unwindToTitleScreenWithSegue:" id="mhF-hv-EXr"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="eCF-xm-Ocm" firstAttribute="centerX" secondItem="GMm-vg-YLn" secondAttribute="centerX" id="4Ig-de-KhH"/>
+                            <constraint firstItem="eCF-xm-Ocm" firstAttribute="top" secondItem="GMm-vg-YLn" secondAttribute="bottom" constant="-190" id="Ane-9Y-W7a"/>
+                            <constraint firstItem="w3j-hs-ova" firstAttribute="leading" secondItem="wBT-o9-cez" secondAttribute="leadingMargin" constant="-8" id="TtI-uv-WQe"/>
+                            <constraint firstItem="aax-mU-Td2" firstAttribute="width" relation="lessThanOrEqual" secondItem="wBT-o9-cez" secondAttribute="width" id="U8V-NI-vwk"/>
+                            <constraint firstItem="GMm-vg-YLn" firstAttribute="width" secondItem="wBT-o9-cez" secondAttribute="width" id="X7m-DH-GKb"/>
+                            <constraint firstItem="GMm-vg-YLn" firstAttribute="centerX" secondItem="wBT-o9-cez" secondAttribute="centerX" id="Ygg-SE-tvt"/>
+                            <constraint firstItem="GMm-vg-YLn" firstAttribute="height" secondItem="wBT-o9-cez" secondAttribute="height" id="mlk-dh-yP0"/>
+                            <constraint firstItem="GMm-vg-YLn" firstAttribute="centerY" secondItem="wBT-o9-cez" secondAttribute="centerY" id="nTh-WG-h0g"/>
+                            <constraint firstItem="w3j-hs-ova" firstAttribute="top" secondItem="ozO-gV-HaO" secondAttribute="bottom" constant="-3" id="oZc-Lq-MUO"/>
+                            <constraint firstItem="aax-mU-Td2" firstAttribute="centerY" secondItem="wBT-o9-cez" secondAttribute="centerY" id="vs3-8t-T5t"/>
+                            <constraint firstItem="aax-mU-Td2" firstAttribute="centerX" secondItem="wBT-o9-cez" secondAttribute="centerX" id="wSe-Sb-sSp"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backgroundImageView" destination="GMm-vg-YLn" id="c0H-58-Pnk"/>
+                        <outlet property="levelNumberLabel" destination="fUS-d4-Wd9" id="U4T-H6-IJl"/>
+                        <outlet property="levelSubtitleLabel" destination="hq8-R9-vCH" id="Dxz-si-fJI"/>
+                        <outlet property="levelTitleLabel" destination="l5U-Ub-ZCt" id="2p7-4O-s9q"/>
+                        <segue destination="BV1-FR-VrT" kind="presentation" identifier="LaunchLevelSegue" id="6bQ-b6-p7o"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0o3-DK-bou" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="JyY-et-OBP" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="157" y="-1144"/>
+        </scene>
+        <!--Ecosystem View Controller-->
+        <scene sceneID="tXr-a1-R10">
+            <objects>
+                <viewController id="BV1-FR-VrT" customClass="EcosystemViewController" customModule="Ecosystem_Core_Assembler" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8aa-yV-Osq"/>
+                        <viewControllerLayoutGuide type="bottom" id="qHh-Mt-9TT"/>
+                    </layoutGuides>
+                    <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="3se-qz-xqx" customClass="SKView">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1md-38-bui">
+                                <rect key="frame" x="6" y="6" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="settingsbutton">
+                                    <color key="titleColor" red="0.99607473611831665" green="0.99220293760299683" blue="0.99199241399765015" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="nvo-x5-b9U" kind="unwind" unwindAction="unwindToTitleScreenWithSegue:" id="8S0-8g-WL8"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="jRi-7e-M8q"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
+                <exit id="nvo-x5-b9U" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="89.6484375" y="-30.46875"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="playbutton" width="170" height="170"/>
+        <image name="settingsbutton" width="170" height="170"/>
+        <image name="tundra" width="1024" height="768"/>
+    </resources>
+</document>
